@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useEffect, useRef } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { motion, useInView } from 'motion/react';
 import {
   Sparkles,
@@ -14,22 +14,9 @@ import {
   HeartHandshake,
   DollarSign,
   ArrowRight,
-  ArrowUpRight,
-  Sofa,
-  BedDouble,
-  CookingPot,
-  Grid,
-  Layers,
-  Tv,
-  Briefcase,
-  Building,
-  Utensils,
-  Coffee,
-  Key
+  ArrowUpRight
 } from 'lucide-react';
-import { MapPin, Camera, ChevronRight } from 'lucide-react';
-import { projectsData as defaultProjects } from '../data/projects';
-import { Project } from '../types';
+import { portfolioProjects } from '../data/projects';
 
 // Animated Count Up Component
 function StatCounter({ value, suffix, label }: { value: number; suffix: string; label: string }) {
@@ -72,26 +59,7 @@ function StatCounter({ value, suffix, label }: { value: number; suffix: string; 
 }
 
 export default function Home() {
-  const navigate = useNavigate();
-  const [projects, setProjects] = useState<Project[]>([]);
-
-  useEffect(() => {
-    const saved = localStorage.getItem('choudhary_studio_projects');
-    if (saved) {
-      try {
-        const parsed = JSON.parse(saved);
-        if (Array.isArray(parsed) && parsed.length > 0) {
-          setProjects([...defaultProjects, ...parsed]);
-          return;
-        }
-      } catch (e) {
-        console.error(e);
-      }
-    }
-    setProjects(defaultProjects);
-  }, []);
-
-  const featuredProjects = projects.slice(0, 4);
+  const featuredCollections = portfolioProjects.slice(0, 6);
 
   // Why choose us items
   const whyChooseUs = [
@@ -253,91 +221,70 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. FEATURED PROJECTS SECTION */}
-      <section className="py-24 bg-[#121212] relative border-b border-white/5" id="projects-grid-section">
+      {/* 3. FEATURED PORTFOLIO SECTION */}
+      <section className="py-24 bg-[#121212] relative border-b border-white/5" id="featured-portfolio-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-4">
             <div>
               <span className="text-[#C9A227] text-xs font-mono tracking-[0.4em] uppercase block mb-3">
-                Craftsmanship
+                Curated Showcase
               </span>
               <h2 className="text-3xl md:text-5xl font-sans font-medium tracking-tight text-white uppercase">
-                Featured Projects
+                Featured Portfolio
               </h2>
             </div>
             <Link
               to="/portfolio"
-              className="text-xs font-sans tracking-[0.2em] text-[#C9A227] hover:text-white uppercase font-bold flex items-center gap-2 group transition-all"
+              className="px-6 py-3 bg-[#C9A227] hover:bg-white text-black font-semibold text-xs tracking-[0.2em] uppercase rounded-sm transition-all duration-300 flex items-center gap-2 group shadow-lg"
+              id="explore-full-portfolio-btn"
             >
-              View All Completed Projects
-              <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              <span>Explore Full Portfolio</span>
+              <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8">
-            {featuredProjects.map((project, idx) => {
+          {/* Desktop 3 cols, Tablet 2 cols, Mobile 1 col */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {featuredCollections.map((collection, idx) => {
+              const heroImage = collection.images[0]?.url;
+              const title = collection.label || `Collection ${String(idx + 1).padStart(2, '0')}`;
+
               return (
                 <motion.div
-                  key={project.id}
+                  key={collection.id}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: '-100px' }}
-                  transition={{ duration: 0.6, delay: idx * 0.1 }}
-                  className="group relative overflow-hidden glass rounded-xl flex flex-col justify-between hover:border-[#C9A227]/30 hover:shadow-2xl transition-all duration-500"
-                  id={`project-card-${project.id}`}
+                  viewport={{ once: true, margin: '-50px' }}
+                  transition={{ duration: 0.6, delay: idx * 0.08 }}
                 >
-                  {/* Card Cover image backdrop */}
-                  <div className="aspect-[4/3] overflow-hidden relative">
-                    <img
-                      src={project.coverImage}
-                      alt={project.title}
-                      referrerPolicy="no-referrer"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
-                    
-                    {/* Category Pill Tag */}
-                    <span className="absolute top-4 left-4 bg-black/80 backdrop-blur-md border border-[#C9A227]/30 px-3 py-1 text-[10px] font-mono uppercase tracking-widest text-[#C9A227] rounded-sm">
-                      {project.category}
-                    </span>
+                  <Link
+                    to={`/portfolio#${collection.id}`}
+                    className="group relative cursor-pointer overflow-hidden rounded-2xl bg-black border border-white/10 hover:border-[#C9A227]/60 hover:shadow-[0_0_30px_rgba(201,162,39,0.18)] transition-all duration-500 flex flex-col h-full"
+                    id={`featured-card-${collection.id}`}
+                  >
+                    {/* Hero Image Container */}
+                    <div className="aspect-[4/3] w-full overflow-hidden relative">
+                      <img
+                        src={heroImage}
+                        alt={title}
+                        referrerPolicy="no-referrer"
+                        loading="lazy"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                      />
+                      {/* Ambient Gradient Overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
+                    </div>
 
-                    {/* Photo count indicator */}
-                    <span className="absolute bottom-4 right-4 bg-zinc-950/90 backdrop-blur-sm border border-white/10 px-2.5 py-1 text-[10px] font-mono uppercase tracking-widest text-zinc-300 rounded-sm flex items-center gap-1.5">
-                      <Camera size={11} className="text-[#C9A227]" />
-                      <span>{project.galleryImages.length} Photos</span>
-                    </span>
-                  </div>
-
-                  <div className="p-6 flex-1 flex flex-col justify-between space-y-4 bg-zinc-950/40">
-                    <div>
-                      {project.location && (
-                        <div className="flex items-center gap-1.5 text-zinc-500 font-mono text-[10px] uppercase tracking-widest mb-1.5">
-                          <MapPin size={11} className="text-zinc-500 shrink-0" />
-                          <span>{project.location}</span>
-                        </div>
-                      )}
-                      <h3 className="text-lg font-sans font-medium text-white group-hover:text-[#C9A227] transition-all duration-300 line-clamp-1">
-                        {project.title}
+                    {/* Clean Minimal Title Bar Only */}
+                    <div className="p-5 bg-zinc-950/90 border-t border-white/5 flex items-center justify-between mt-auto">
+                      <h3 className="text-base font-sans font-medium text-white group-hover:text-[#C9A227] tracking-wide uppercase transition-colors duration-300">
+                        {title}
                       </h3>
-                      <p className="text-zinc-400 text-xs leading-relaxed mt-2 line-clamp-2 font-light">
-                        {project.description}
-                      </p>
+                      <div className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400 group-hover:border-[#C9A227] group-hover:bg-[#C9A227] group-hover:text-black transition-all duration-300">
+                        <ArrowUpRight size={15} />
+                      </div>
                     </div>
-
-                    <div className="pt-4 border-t border-white/5 flex items-center justify-between">
-                      <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider">
-                        Area: {project.area}
-                      </span>
-                      <Link
-                        to={`/portfolio?project=${project.id}`}
-                        className="px-3.5 py-2 bg-transparent hover:bg-[#C9A227] text-[#C9A227] hover:text-black border border-[#C9A227]/20 hover:border-transparent text-[10px] font-mono uppercase tracking-widest rounded-sm transition-all duration-300 flex items-center gap-1.5 cursor-pointer"
-                      >
-                        <span>View Project</span>
-                        <ChevronRight size={12} />
-                      </Link>
-                    </div>
-                  </div>
+                  </Link>
                 </motion.div>
               );
             })}

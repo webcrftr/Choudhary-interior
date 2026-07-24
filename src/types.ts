@@ -8,6 +8,18 @@ export interface GalleryImage {
   title: string;
 }
 
+export interface PortfolioImage {
+  url: string;
+  title?: string;
+}
+
+export interface PortfolioProject {
+  id: string | number;
+  label?: string;
+  badge?: string;
+  images: PortfolioImage[];
+}
+
 export interface Project {
   id: string;
   title: string;

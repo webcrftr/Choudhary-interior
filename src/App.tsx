@@ -13,6 +13,7 @@ import FloatingActions from './components/FloatingActions';
 import Home from './pages/Home';
 import About from './pages/About';
 import Portfolio from './pages/Portfolio';
+import DesignGallery from './pages/DesignGallery';
 import Contact from './pages/Contact';
 
 // Scroll To Top on route change helper
@@ -44,6 +45,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/design-gallery" element={<DesignGallery />} />
             <Route path="/services" element={<Portfolio />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>

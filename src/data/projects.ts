@@ -1,4 +1,584 @@
-import { Project } from '../types';
+import { Project, PortfolioProject } from '../types';
+
+export const portfolioProjects: PortfolioProject[] = [
+  {
+    id: 'project-01',
+    label: 'Collection 01',
+    images: [
+      {
+        title: 'Living Room',
+        url: 'https://iili.io/COu1lz7.jpg'
+      },
+      {
+        title: 'Kitchen',
+        url: 'https://iili.io/COu1Ye2.jpg'
+      },
+      {
+        title: 'Bedroom',
+        url: 'https://iili.io/COu175l.jpg'
+      },
+      {
+        title: 'TV Unit',
+        url: 'https://iili.io/COu1abS.jpg'
+      },
+      {
+        title: 'Wardrobe',
+        url: 'https://iili.io/COu10X9.jpg'
+      },
+      {
+        title: 'Bathroom',
+        url: 'https://iili.io/COu11se.jpg'
+      },
+      {
+        title: 'Dining',
+        url: 'https://iili.io/COu1Gqu.jpg'
+      },
+      {
+        title: 'False Ceiling',
+        url: 'https://iili.io/COu1M0b.jpg'
+      },
+      {
+        title: 'Balcony',
+        url: 'https://iili.io/COu1jeV.jpg'
+      },
+      {
+        title: 'Study Room',
+        url: 'https://iili.io/COu1wmB.jpg'
+      },
+      {
+        title: 'Entrance',
+        url: 'https://iili.io/COu1OzP.jpg'
+      }
+    ]
+  },
+  {
+    id: 'project-02',
+    label: 'Collection 02',
+    images: [
+      {
+        title: 'Living Room',
+        url: 'https://iili.io/COWlHmB.jpg'
+      },
+      {
+        title: 'Kitchen',
+        url: 'https://iili.io/COWl9eV.jpg'
+      },
+      {
+        title: 'Dining',
+        url: 'https://iili.io/COWcpdx.jpg'
+      },
+      {
+        title: 'Master Bedroom',
+        url: 'https://iili.io/COWcy5Q.jpg'
+      },
+      {
+        title: 'Bedroom',
+        url: 'https://iili.io/COWldzP.jpg'
+      },
+      {
+        title: 'TV Unit',
+        url: 'https://iili.io/COWl2X1.jpg'
+      },
+      {
+        title: 'Wardrobe',
+        url: 'https://iili.io/COWlKqg.jpg'
+      },
+      {
+        title: 'Bathroom',
+        url: 'https://iili.io/COWl3LF.jpg'
+      },
+      {
+        title: 'Study Room',
+        url: 'https://iili.io/COWlxmN.jpg'
+      },
+      {
+        title: 'Entrance',
+        url: 'https://iili.io/COWlTXt.jpg'
+      },
+      {
+        title: 'Balcony',
+        url: 'https://iili.io/COWluLX.jpg'
+      },
+      {
+        title: 'Foyer',
+        url: 'https://iili.io/COWlRBn.jpg'
+      },
+      {
+        title: 'Lounge',
+        url: 'https://iili.io/COWl51s.jpg'
+      },
+      {
+        title: 'False Ceiling',
+        url: 'https://iili.io/COWl7rG.jpg'
+      }
+    ]
+  },
+  {
+    id: 'project-03',
+    label: 'Collection 03',
+    images: [
+      {
+        title: 'Living Room',
+        url: 'https://iili.io/COWUme2.jpg'
+      },
+      {
+        title: 'Foyer & Entrance',
+        url: 'https://iili.io/COWgHX9.jpg'
+      },
+      {
+        title: 'Dining Area',
+        url: 'https://iili.io/COWg9z7.jpg'
+      },
+      {
+        title: 'Modular Kitchen',
+        url: 'https://iili.io/COWUpbS.jpg'
+      },
+      {
+        title: 'Lounge Lounge',
+        url: 'https://iili.io/COWg2qu.jpg'
+      },
+      {
+        title: 'Master Bedroom',
+        url: 'https://iili.io/COWgJse.jpg'
+      },
+      {
+        title: 'Bedroom Lounge',
+        url: 'https://iili.io/COWg30b.jpg'
+      },
+      {
+        title: 'TV Unit & Console',
+        url: 'https://iili.io/COWgfdx.jpg'
+      },
+      {
+        title: 'Walk-in Wardrobe',
+        url: 'https://iili.io/COWgq5Q.jpg'
+      },
+      {
+        title: 'Ensuite Bathroom',
+        url: 'https://iili.io/COWgBeV.jpg'
+      },
+      {
+        title: 'Guest Bedroom',
+        url: 'https://iili.io/COWgCmB.jpg'
+      },
+      {
+        title: 'Study & Library',
+        url: 'https://iili.io/COWgozP.jpg'
+      },
+      {
+        title: 'Balcony Deck',
+        url: 'https://iili.io/COWgTqg.jpg'
+      },
+      {
+        title: 'False Ceiling Details',
+        url: 'https://iili.io/COWg5dv.jpg'
+      },
+      {
+        title: 'Lighting & Accents',
+        url: 'https://iili.io/COWgu1a.jpg'
+      },
+      {
+        title: 'Bar Unit',
+        url: 'https://iili.io/COWgArJ.jpg'
+      },
+      {
+        title: 'Dining Nook',
+        url: 'https://iili.io/COWgX2f.jpg'
+      },
+      {
+        title: 'Vanity Detail',
+        url: 'https://iili.io/COWgh74.jpg'
+      },
+      {
+        title: 'Powder Room',
+        url: 'https://iili.io/COWgjkl.jpg'
+      },
+      {
+        title: 'Corridor Gallery',
+        url: 'https://iili.io/COWgwp2.jpg'
+      },
+      {
+        title: 'Custom Joinery',
+        url: 'https://iili.io/COWgDEg.jpg'
+      },
+      {
+        title: 'Terrace View',
+        url: 'https://iili.io/COWgb4a.jpg'
+      }
+    ]
+  },
+  {
+    id: 'project-04',
+    label: 'Collection 04',
+    images: [
+      {
+        title: 'Living Room',
+        url: 'https://iili.io/COX5aqJ.jpg'
+      },
+      {
+        title: 'Kitchen',
+        url: 'https://iili.io/COX57sa.jpg'
+      },
+      {
+        title: 'Dining Area',
+        url: 'https://iili.io/COX55Wg.jpg'
+      },
+      {
+        title: 'Master Bedroom',
+        url: 'https://iili.io/COX5c0v.jpg'
+      },
+      {
+        title: 'TV Unit & Console',
+        url: 'https://iili.io/COX5E5N.jpg'
+      },
+      {
+        title: 'Wardrobe',
+        url: 'https://iili.io/COX5GeI.jpg'
+      },
+      {
+        title: 'Bathroom',
+        url: 'https://iili.io/COX5Mbt.jpg'
+      },
+      {
+        title: 'Foyer & Entrance',
+        url: 'https://iili.io/COX5XXn.jpg'
+      },
+      {
+        title: 'Balcony',
+        url: 'https://iili.io/COX5wqG.jpg'
+      }
+    ]
+  },
+  {
+    id: 'project-05',
+    label: 'Collection 05',
+    badge: 'COMMERCIAL PROJECT',
+    images: [
+      {
+        title: 'Main Lobby & Reception',
+        url: 'https://iili.io/CONnIxs.jpg'
+      },
+      {
+        title: 'Executive Conference Room',
+        url: 'https://iili.io/CONnusf.jpg'
+      },
+      {
+        title: 'Open Workspace Area',
+        url: 'https://iili.io/CONnTWG.jpg'
+      },
+      {
+        title: 'Executive Office Suite',
+        url: 'https://iili.io/CONn50l.jpg'
+      },
+      {
+        title: 'Lounge & Meeting Nook',
+        url: 'https://iili.io/CONn7g2.jpg'
+      },
+      {
+        title: 'Breakout & Pantry Space',
+        url: 'https://iili.io/CONnaJS.jpg'
+      },
+      {
+        title: 'Collaborative Pods',
+        url: 'https://iili.io/CONnle9.jpg'
+      },
+      {
+        title: 'Boardroom Detail',
+        url: 'https://iili.io/CONn0be.jpg'
+      }
+    ]
+  },
+  {
+    id: 'project-06',
+    label: 'Collection 06',
+    images: [
+      {
+        title: 'Living Room',
+        url: 'https://iili.io/CONiTjs.jpg'
+      },
+      {
+        title: 'Foyer & Entrance',
+        url: 'https://iili.io/CONiRnf.jpg'
+      },
+      {
+        title: 'Dining Area',
+        url: 'https://iili.io/CONi5G4.jpg'
+      },
+      {
+        title: 'Modular Kitchen',
+        url: 'https://iili.io/CONiuZG.jpg'
+      },
+      {
+        title: 'Master Bedroom',
+        url: 'https://iili.io/CONiaF2.jpg'
+      },
+      {
+        title: 'Wardrobe & Storage',
+        url: 'https://iili.io/CONicaS.jpg'
+      },
+      {
+        title: 'Bathroom Vanity',
+        url: 'https://iili.io/CONil87.jpg'
+      },
+      {
+        title: 'TV Lounge',
+        url: 'https://iili.io/CONi199.jpg'
+      },
+      {
+        title: 'Study Nook',
+        url: 'https://iili.io/CONiMZb.jpg'
+      },
+      {
+        title: 'Balcony View',
+        url: 'https://iili.io/CONiWnj.jpg'
+      },
+      {
+        title: 'Hallway Gallery',
+        url: 'https://iili.io/CONiXMx.jpg'
+      },
+      {
+        title: 'Ceiling & Lighting',
+        url: 'https://iili.io/CONih6Q.jpg'
+      }
+    ]
+  },
+  {
+    id: 'project-07',
+    label: 'Collection 07',
+    images: [
+      {
+        title: 'Living Room',
+        url: 'https://iili.io/COsRBbp.jpg'
+      },
+      {
+        title: 'Dining Area',
+        url: 'https://iili.io/COsRf5v.jpg'
+      },
+      {
+        title: 'Modular Kitchen',
+        url: 'https://iili.io/COsRqeR.jpg'
+      },
+      {
+        title: 'Master Bedroom',
+        url: 'https://iili.io/COsRKdJ.jpg'
+      },
+      {
+        title: 'TV Unit & Console',
+        url: 'https://iili.io/COsRoXI.jpg'
+      },
+      {
+        title: 'Wardrobe',
+        url: 'https://iili.io/COsRxst.jpg'
+      },
+      {
+        title: 'Bathroom Vanity',
+        url: 'https://iili.io/COsRIqX.jpg'
+      },
+      {
+        title: 'Foyer & Entrance',
+        url: 'https://iili.io/COsRT1n.jpg'
+      },
+      {
+        title: 'Balcony Deck',
+        url: 'https://iili.io/COsRugs.jpg'
+      },
+      {
+        title: 'Study Room',
+        url: 'https://iili.io/COsRRdG.jpg'
+      },
+      {
+        title: 'Ceiling & Lighting',
+        url: 'https://iili.io/COsR57f.jpg'
+      },
+      {
+        title: 'Hallway Gallery',
+        url: 'https://iili.io/COsR7e4.jpg'
+      }
+    ]
+  },
+  {
+    id: 'project-08',
+    label: 'Collection 08',
+    images: [
+      {
+        title: 'Living Room',
+        url: 'https://iili.io/COZopn9.jpg'
+      },
+      {
+        title: 'Dining Space',
+        url: 'https://iili.io/COZobZ7.jpg'
+      },
+      {
+        title: 'Modular Kitchen',
+        url: 'https://iili.io/COZoDjS.jpg'
+      },
+      {
+        title: 'Master Bedroom',
+        url: 'https://iili.io/COZoyGe.jpg'
+      },
+      {
+        title: 'TV Unit & Console',
+        url: 'https://iili.io/COZxJ3b.jpg'
+      },
+      {
+        title: 'Wardrobe & Storage',
+        url: 'https://iili.io/COZxdaj.jpg'
+      },
+      {
+        title: 'Bathroom Vanity',
+        url: 'https://iili.io/COZxKuV.jpg'
+      },
+      {
+        title: 'Foyer & Entrance',
+        url: 'https://iili.io/COZx3yQ.jpg'
+      },
+      {
+        title: 'Study Corner',
+        url: 'https://iili.io/COZxqZP.jpg'
+      },
+      {
+        title: 'Balcony View',
+        url: 'https://iili.io/COZxCn1.jpg'
+      }
+    ]
+  },
+  {
+    id: 'project-09',
+    label: 'Collection 09',
+    images: [
+      {
+        title: 'Living Room Showcase',
+        url: 'https://iili.io/COZT1KF.jpg'
+      },
+      {
+        title: 'Dining Area',
+        url: 'https://iili.io/COZTcMP.jpg'
+      },
+      {
+        title: 'Kitchen Interior',
+        url: 'https://iili.io/COZTEcg.jpg'
+      },
+      {
+        title: 'Bedroom Suite',
+        url: 'https://iili.io/COZTlP1.jpg'
+      },
+      {
+        title: 'TV Console & Wall',
+        url: 'https://iili.io/COZTGSa.jpg'
+      },
+      {
+        title: 'Wardrobe Details',
+        url: 'https://iili.io/COZTVHJ.jpg'
+      },
+      {
+        title: 'Vanity & Bathroom',
+        url: 'https://iili.io/COZTXNR.jpg'
+      },
+      {
+        title: 'Hallway & Foyer',
+        url: 'https://iili.io/COZThtp.jpg'
+      },
+      {
+        title: 'Balcony Corner',
+        url: 'https://iili.io/COZTvln.jpg'
+      }
+    ]
+  },
+  {
+    id: 'project-10',
+    label: 'Collection 10',
+    images: [
+      {
+        title: 'Living Room',
+        url: 'https://iili.io/COZ79YF.jpg'
+      },
+      {
+        title: 'Dining Area',
+        url: 'https://iili.io/COZ5mrP.jpg'
+      },
+      {
+        title: 'Modular Kitchen',
+        url: 'https://iili.io/COZ5y21.jpg'
+      },
+      {
+        title: 'Master Bedroom',
+        url: 'https://iili.io/COZ5bEB.jpg'
+      },
+      {
+        title: 'Guest Bedroom',
+        url: 'https://iili.io/COZ72TJ.jpg'
+      },
+      {
+        title: 'TV Lounge',
+        url: 'https://iili.io/COZ73hv.jpg'
+      },
+      {
+        title: 'Foyer Entrance',
+        url: 'https://iili.io/COZ7FQR.jpg'
+      },
+      {
+        title: 'Ceiling Detail',
+        url: 'https://iili.io/COZ7fBp.jpg'
+      },
+      {
+        title: 'Balcony Deck',
+        url: 'https://iili.io/COZ7B4I.jpg'
+      },
+      {
+        title: 'Wardrobe Unit',
+        url: 'https://iili.io/COZ7oYX.jpg'
+      },
+      {
+        title: 'Vanity Counter',
+        url: 'https://iili.io/COZ7xvn.jpg'
+      },
+      {
+        title: 'Study Room',
+        url: 'https://iili.io/COZ7n2t.jpg'
+      },
+      {
+        title: 'Corridor Gallery',
+        url: 'https://iili.io/COZ7ujf.jpg'
+      },
+      {
+        title: 'Accent Wall',
+        url: 'https://iili.io/COZ7TTG.jpg'
+      },
+      {
+        title: 'Console Display',
+        url: 'https://iili.io/COZ7AQ4.jpg'
+      },
+      {
+        title: 'Sitting Nook',
+        url: 'https://iili.io/COZ75Cl.jpg'
+      },
+      {
+        title: 'Dressing Area',
+        url: 'https://iili.io/COZ7Y4S.jpg'
+      },
+      {
+        title: 'Bar Counter',
+        url: 'https://iili.io/COZ7c37.jpg'
+      },
+      {
+        title: 'Shoe Rack & Foyer',
+        url: 'https://iili.io/COZ70ve.jpg'
+      },
+      {
+        title: 'Pooja Unit',
+        url: 'https://iili.io/COZ7la9.jpg'
+      },
+      {
+        title: 'Kids Bedroom',
+        url: 'https://iili.io/COZ71yu.jpg'
+      },
+      {
+        title: 'Bathroom Design',
+        url: 'https://iili.io/COZ7GTb.jpg'
+      }
+    ]
+  }
+];
 
 export const projectsData: Project[] = [
   {
@@ -10,52 +590,16 @@ export const projectsData: Project[] = [
     year: '2025',
     description: 'A luxurious 3BHK high-rise apartment showing off intelligent space zoning, rich fluted walnut panels, and custom-designed lighting.',
     coverImage: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1200',
-    clientRequirements: 'The client, a young dynamic couple, wanted a highly contemporary design with efficient space utilization, a modern kitchen, distinct spaces for work-from-home, and premium gold metal accents to convey understated luxury.',
-    designConcept: 'Warm Minimalist Luxury. By utilizing customized sliding fluted glass partitions, walnut wood wall paneling, and PVD gold inlay strips, we achieved a seamless, continuous aesthetic that maximizes natural light.',
-    materialsUsed: ['Italian Statuario Marble', 'Fluted Walnut Veneer', 'PVD Gold Stainless Steel Inlays', 'Premium Saint-Gobain Glass', 'Custom Velvet & Bouclé Fabrics'],
-    challenges: 'Optimizing the kitchen layout within a strict structural column constraint while integrating high-end built-in appliances and maintaining an open, fluid breakfast counter format.',
-    finalOutcome: 'A magnificent high-rise apartment that feels open, airy, and deeply sophisticated. The smart zoning allows the family to switch between formal hosting and quiet WFH routines effortlessly.',
+    clientRequirements: 'The client wanted a contemporary design with efficient space utilization and luxury gold accents.',
+    designConcept: 'Warm Minimalist Luxury utilizing fluted glass partitions and walnut veneer.',
+    materialsUsed: ['Italian Statuario Marble', 'Fluted Walnut Veneer', 'PVD Gold Inlays'],
+    challenges: 'Optimizing kitchen layout within strict column constraints.',
+    finalOutcome: 'A open, airy, and deeply sophisticated apartment.',
     galleryImages: [
-      {
-        title: 'Hall',
-        url: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=1200'
-      },
-      {
-        title: 'Living Room',
-        url: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1200'
-      },
-      {
-        title: 'Kitchen',
-        url: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200'
-      },
-      {
-        title: 'Master Bedroom',
-        url: 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&q=80&w=1200'
-      },
-      {
-        title: 'Kids Bedroom',
-        url: 'https://images.unsplash.com/photo-1558882224-cca166733360?auto=format&fit=crop&q=80&w=1200'
-      },
-      {
-        title: 'Bathroom',
-        url: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=1200'
-      },
-      {
-        title: 'Dining Area',
-        url: 'https://images.unsplash.com/photo-1617806118233-18e1db207f62?auto=format&fit=crop&q=80&w=1200'
-      },
-      {
-        title: 'Balcony',
-        url: 'https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&q=80&w=1200'
-      },
-      {
-        title: 'TV Unit',
-        url: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1200'
-      },
-      {
-        title: 'Wardrobe',
-        url: 'https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&q=80&w=1200'
-      }
+      { title: 'Hall', url: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=1200' },
+      { title: 'Living Room', url: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1200' },
+      { title: 'Kitchen', url: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200' },
+      { title: 'Master Bedroom', url: 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&q=80&w=1200' }
     ]
   },
   {
@@ -67,162 +611,14 @@ export const projectsData: Project[] = [
     year: '2025',
     description: 'An architectural villa fusing contemporary steel and float glass structures with warm teak-wood cladding.',
     coverImage: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=1200',
-    clientRequirements: 'A sprawling modern country retreat for a multi-generational family. They requested a strong indoor-outdoor connection, double-height ceiling volumes, premium marble work, and an expansive outdoor entertainment deck.',
-    designConcept: 'Biophilic Luxury. The design focuses on bringing Pune\'s pleasant outdoor foliage inside, using floor-to-ceiling glass walls, floating steel and teakwood staircases, and slate stone panels on major accent walls.',
-    materialsUsed: ['Imported Botticino Marble', 'Burma Teak Wood', 'Powder-Coated Structural Steel', 'Natural Slate Stone Cladding', 'Automated Louvers'],
-    challenges: 'Designing the double-height formal lounge acoustics to minimize echo while keeping raw stone and marble as the dominant surface materials.',
-    finalOutcome: 'The villa stands as an architectural triumph, where raw organic stones harmoniously interact with sleek high-gloss metallic frames, delivering an awe-inspiring residence.',
+    clientRequirements: 'Sprawling retreat with strong indoor-outdoor connection.',
+    designConcept: 'Biophilic Luxury.',
+    materialsUsed: ['Botticino Marble', 'Teak Wood', 'Slate Stone Cladding'],
+    challenges: 'Acoustics in double-height formal lounge.',
+    finalOutcome: 'Architectural triumph with natural organic textures.',
     galleryImages: [
-      {
-        title: 'Facade',
-        url: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=1200'
-      },
-      {
-        title: 'Grand Living Area',
-        url: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=1200'
-      },
-      {
-        title: 'Modern Kitchen',
-        url: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=1200'
-      },
-      {
-        title: 'Private Lounge',
-        url: 'https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&q=80&w=1200'
-      },
-      {
-        title: 'Floating Staircase',
-        url: 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&q=80&w=1200'
-      },
-      {
-        title: 'Master Bed Suite',
-        url: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&q=80&w=1200'
-      },
-      {
-        title: 'Outdoor Deck',
-        url: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&q=80&w=1200'
-      },
-      {
-        title: 'Designer Bathroom',
-        url: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&q=80&w=1200'
-      }
-    ]
-  },
-  {
-    id: 'contemporary-flat-delhi',
-    title: 'Contemporary Flat - Delhi',
-    location: 'Greater Kailash, Delhi',
-    category: 'Apartment',
-    area: '2,100 sq ft',
-    year: '2024',
-    description: 'A highly sophisticated apartment layout featuring gold PVD screens, Italian marble floors, and custom acoustic backdrops.',
-    coverImage: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1200',
-    clientRequirements: 'A highly customized luxury apartment in South Delhi. The client requested sound-insulated rooms, integrated smart home controls, elegant acoustic panels, and custom-styled display cases for their extensive art collection.',
-    designConcept: 'Art-Deco Infused Modernism. We blended geometric metallic screens, deep jewel-toned fabrics, and custom art-accented spotlighting to create an upscale gallery-like living experience.',
-    materialsUsed: ['Armani Grey Marble', 'Acoustic Suede Panels', 'Brass Partition Screens', 'Handcrafted PU-finished Wardrobes', 'Smart Hue Lighting Systems'],
-    challenges: 'Retrofitting multi-zone acoustic dampening inside a pre-built flat structure without lowering the ceiling heights significantly.',
-    finalOutcome: 'A gorgeous residence that behaves as a private sanctuary—acoustically pristine, visually dramatic, and completely responsive to smart voice commands.',
-    galleryImages: [
-      {
-        title: 'Entrance Lobby',
-        url: 'https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&q=80&w=1200'
-      },
-      {
-        title: 'Drawing Room',
-        url: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1200'
-      },
-      {
-        title: 'Powder Room',
-        url: 'https://images.unsplash.com/photo-1502005229762-fc1b2b812ca5?auto=format&fit=crop&q=80&w=1200'
-      },
-      {
-        title: 'Modular Kitchen',
-        url: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&q=80&w=1200'
-      },
-      {
-        title: 'Dining Room',
-        url: 'https://images.unsplash.com/photo-1536376072261-38c75010e6c9?auto=format&fit=crop&q=80&w=1200'
-      },
-      {
-        title: 'Master Bedroom',
-        url: 'https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&q=80&w=1200'
-      },
-      {
-        title: 'Guest Bedroom',
-        url: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=1200'
-      },
-      {
-        title: 'Study / Home Office',
-        url: 'https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80&w=1200'
-      },
-      {
-        title: 'Kids Play Area',
-        url: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=1200'
-      },
-      {
-        title: 'Main Bathroom',
-        url: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=1200'
-      },
-      {
-        title: 'Guest Bathroom',
-        url: 'https://images.unsplash.com/photo-1600566752229-25118b111116?auto=format&fit=crop&q=80&w=1200'
-      },
-      {
-        title: 'Utility Balcony',
-        url: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=1200'
-      }
-    ]
-  },
-  {
-    id: 'premium-duplex-hyderabad',
-    title: 'Premium Duplex - Hyderabad',
-    location: 'Jubilee Hills, Hyderabad',
-    category: 'Apartment',
-    area: '3,400 sq ft',
-    year: '2025',
-    description: 'An elite double-story duplex designed for entertainment and hosting, complete with private bar, biophilic walls, and automated acoustics.',
-    coverImage: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1200',
-    clientRequirements: 'The client requested a lavish multi-level penthouse focusing on elite entertainment spaces. Key elements included a private bar, a high-tech home theater, and a sky terrace balcony with biophilic green walls.',
-    designConcept: 'Penthouse Elegance. High-gloss charcoal panels paired with warm amber underlighting. Floating spiral stairs under a custom crystal chandelier form the centerpiece of the duplex.',
-    materialsUsed: ['Black Marquino Marble', 'Smoked Oak Veneer', 'Crystal Chandeliers', 'PU-coated High-Gloss Panels', 'Automated Sound Absorption Panels'],
-    challenges: 'Installing the massive custom-engineered spiral staircase frame within the existing structural slab without compromising load distribution.',
-    finalOutcome: 'A true crown jewel penthouse that balances energetic entertainment features with ultra-cozy private living suites on the upper level.',
-    galleryImages: [
-      {
-        title: 'Double-height Lobby',
-        url: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1200'
-      },
-      {
-        title: 'Formal Lounge',
-        url: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=1200'
-      },
-      {
-        title: 'Ultra Kitchen',
-        url: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=1200'
-      },
-      {
-        title: 'Dining Room',
-        url: 'https://images.unsplash.com/photo-1617806118233-18e1db207f62?auto=format&fit=crop&q=80&w=1200'
-      },
-      {
-        title: 'Parents Bedroom',
-        url: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&q=80&w=1200'
-      },
-      {
-        title: 'Suite Wardrobe',
-        url: 'https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&q=80&w=1200'
-      },
-      {
-        title: 'Home Theater',
-        url: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=1200'
-      },
-      {
-        title: 'Private Bar',
-        url: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=1200'
-      },
-      {
-        title: 'Sky Balcony',
-        url: 'https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&q=80&w=1200'
-      }
+      { title: 'Facade', url: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=1200' },
+      { title: 'Grand Living', url: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=1200' }
     ]
   }
 ];
